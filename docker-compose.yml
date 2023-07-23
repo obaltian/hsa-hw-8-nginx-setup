@@ -1,0 +1,10 @@
+version: '2'
+services:
+  webserver:
+    image: openresty/openresty:alpine
+    ports:
+      - 8000:8000
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/nginx.conf
+      - ./scripts:/scripts
+      - ./static:/static
